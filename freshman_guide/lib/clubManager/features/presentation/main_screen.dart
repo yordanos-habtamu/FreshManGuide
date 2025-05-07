@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 // Import the four screens (excluding NotificationsScreen)
 import 'package:freshman_guide/clubManager/features/presentation/fifthScreen.dart';
 import 'package:freshman_guide/clubManager/features/presentation/firstScreen.dart';
-import 'package:freshman_guide/clubManager/features/presentation/fourthScreen.dart';
-import 'package:freshman_guide/clubManager/features/presentation/main_screen.dart';
 import 'package:freshman_guide/clubManager/features/presentation/secondScreen.dart';
 import 'package:freshman_guide/clubManager/features/presentation/thirdScreen.dart';
 import 'package:freshman_guide/clubManager/features/presentation/sixScreen.dart';

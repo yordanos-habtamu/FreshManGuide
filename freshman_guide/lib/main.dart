@@ -79,10 +79,12 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:freshman_guide/buisness/features/presentation/fifthScreen.dart';
+
+import 'package:freshman_guide/buisness/features/presentation/fourthScreen.dart';
+import 'package:freshman_guide/buisness/features/presentation/main_screen_business.dart';
+
 import 'package:freshman_guide/clubManager/features/presentation/fifthScreen.dart';
-import 'package:freshman_guide/clubManager/features/presentation/firstScreen.dart';
-import 'package:freshman_guide/clubManager/features/presentation/fourthScreen.dart';
-import 'package:freshman_guide/clubManager/features/presentation/main_screen.dart';
 import 'package:freshman_guide/clubManager/features/presentation/secondScreen.dart';
 import 'package:freshman_guide/clubManager/features/presentation/thirdScreen.dart';
 
@@ -112,13 +114,34 @@ class HomePage extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+
+      //ROUTE FOR CLUB SCREEN
+
+      // initialRoute: '/',
+      // routes: {
+      //   // '/': (context) => const ClubsOverviewScreen(),
+      //   '/': (context) => const MainScreen(),
+      //   '/IT_club': (context) => const ITClubChatScreen(),
+      //   '/charity_club': (context) => const ArrangeEventScreen(),
+      //   '/notification_screen': (context) => const NotificationsScreen(),
+      //   '/profile': (context) => const PostClubScreen(),
+      // },
+
+      // ROUTE FOR BUSINESS SCREEN
+
       initialRoute: '/',
       routes: {
-        // '/': (context) => const ClubsOverviewScreen(),
-        '/': (context) => const MainScreen(),
+        // '/': (context) => const AddBannerScreen(),
+
+        //FOR CLUB MANAGER SCREENS
+        // '/': (context) => const MainScreen(),
+
+        //FOR BUSINESS SCREENS
+        '/': (context) => const NavigationScreen(),
+
         '/IT_club': (context) => const ITClubChatScreen(),
         '/charity_club': (context) => const ArrangeEventScreen(),
-        '/notification_screen': (context) => const NotificationsScreen(),
+        // '/notification_screen': (context) => const NotificationsScreen(),
         '/profile': (context) => const PostClubScreen(),
       },
     );
