@@ -2,8 +2,9 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:freshman_guide/admin/features/authentication/data/entities/user.dart';
+
 import 'package:freshman_guide/clubManager/features/data/repositories/club_repository.dart';
+import 'package:freshman_guide/clubManager/features/domain/entities/club_entity.dart';
 
 class ClubProvider with ChangeNotifier {
   final ClubService _clubRepository;

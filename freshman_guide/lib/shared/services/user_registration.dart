@@ -1,7 +1,11 @@
 import 'dart:typed_data';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:freshman_guide/alumni/features/domain/entities/alumni_entities.dart';
+import 'package:freshman_guide/buisness/features/domain/entities/business.dart';
+import 'package:freshman_guide/clubManager/features/domain/entities/clubManager_entity.dart';
 import 'package:freshman_guide/clubManager/features/domain/entities/freshman_entity.dart';
+import 'package:freshman_guide/mentor/features/domain/entities/mentor_entity.dart';
 import 'package:freshman_guide/shared/models/user.dart';
 import 'package:freshman_guide/shared/utility/image_pick.dart';
  
@@ -66,24 +70,6 @@ class RegisterService {
             events: additionalAttributes['events'] != null
                 ? List<String>.from(additionalAttributes['events'] as List)
                 : [],
-          );
-          break;
-
-        case 'staff':
-          if (!additionalAttributes.containsKey('access') ||
-              !additionalAttributes.containsKey('employeeId')) {
-            throw Exception("Access list and employee ID are required for Staff");
-          }
-          userData = Staff(
-            bio: additionalAttributes['bio'] as String?,
-            Gender: gender,
-            FirstName: firstName,
-             LastName: lastName,
-            email: email,
-            photoUrl: photoURL,
-            uid: user.uid,
-            access: List<String>.from(additionalAttributes['access'] as List),
-            employeeId: additionalAttributes['employeeId'] as String,
           );
           break;
 
@@ -207,17 +193,7 @@ class RegisterService {
                 : [],
           );
           break;
-        case 'admin':
-           userData =GUser(
-            bio: additionalAttributes['bio'] as String?,
-            Gender: gender, 
-            FirstName: firstName,
-             LastName: lastName, 
-             email: email, 
-             photoUrl: photoURL,
-             role: role,
-              uid: user.uid);
-              break;
+     
         default:
           throw Exception("Unsupported role: $role");
       }
