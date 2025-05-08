@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'shared/widget/onboarding.dart'; // Import the OnboardingScreen
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   const firebaseConfig = FirebaseOptions(
-  apiKey: "AIzaSyBbjXG9CLtU8yQ3z9TdbFcLn2EZLaP37Kg",
-  authDomain: "bot-ecom.firebaseapp.com",
-  projectId: "bot-ecom",
-  storageBucket: "bot-ecom.firebasestorage.app",
-  messagingSenderId: "485477818454",
-  appId: "1:485477818454:web:57da1073c512a9fb6d5bf7"
+    apiKey: "AIzaSyBbjXG9CLtU8yQ3z9TdbFcLn2EZLaP37Kg",
+    authDomain: "bot-ecom.firebaseapp.com",
+    projectId: "bot-ecom",
+    storageBucket: "bot-ecom.firebasestorage.app",
+    messagingSenderId: "485477818454",
+    appId: "1:485477818454:web:57da1073c512a9fb6d5bf7",
   );
-  await Firebase.initializeApp(options:firebaseConfig);
+  await Firebase.initializeApp(options: firebaseConfig);
   runApp(const MyApp());
 }
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const GetStartedScreen(), // Set OnboardingScreen as the home screen
     );
   }
 }

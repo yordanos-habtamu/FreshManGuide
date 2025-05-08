@@ -1,0 +1,2 @@
+C:/Users/user/Desktop/freshman guide app/FreshManGuide/freshman_guide/android/app/.cxx/Debug/d1451k4q/x86/CMakeFiles/edit_cache.dir
+C:/Users/user/Desktop/freshman guide app/FreshManGuide/freshman_guide/android/app/.cxx/Debug/d1451k4q/x86/CMakeFiles/rebuild_cache.dir
