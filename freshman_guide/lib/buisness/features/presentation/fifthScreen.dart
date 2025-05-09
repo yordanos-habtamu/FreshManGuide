@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-// Banner class to hold the form data
-class BannerData {
+class BannerFormData {
   final String title;
   final String description;
   final String content;
 
-  BannerData(
-      {required this.title, required this.description, required this.content});
+  BannerFormData({
+    required this.title,
+    required this.description,
+    required this.content,
+  });
 }
 
 class AddBannerScreen extends StatefulWidget {
-  const AddBannerScreen({Key? key}) : super(key: key);
+  const AddBannerScreen({super.key});
 
   @override
   _AddBannerScreenState createState() => _AddBannerScreenState();
@@ -183,7 +185,7 @@ class _AddBannerScreenState extends State<AddBannerScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      final newBanner = BannerData(
+                      final newBanner = BannerFormData(
                         title: _titleController.text,
                         description: _descriptionController.text,
                         content: _contentController.text,

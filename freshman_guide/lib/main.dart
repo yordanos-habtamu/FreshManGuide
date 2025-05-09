@@ -109,8 +109,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:freshman_guide/buisness/features/data/repositories/business_repo.dart';
+import 'package:freshman_guide/buisness/features/data/repositories/menu_service.dart';
 import 'package:freshman_guide/buisness/features/presentation/sixthScreen.dart';
 import 'package:freshman_guide/buisness/features/presentation/thirdScreen.dart';
+import 'package:freshman_guide/buisness/features/provider/menu_provider.dart';
 import 'package:freshman_guide/clubManager/features/presentation/fifthScreen.dart';
 import 'package:freshman_guide/clubManager/features/presentation/firstScreen.dart';
 import 'package:freshman_guide/clubManager/features/presentation/secondScreen.dart';
@@ -158,6 +161,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => SigninProvider(SigninService()),
         ),
+        ChangeNotifierProvider(
+            create: (_) => MenuProvider(MenuService(MenuRepository()))),
       ],
       child: MaterialApp(
         title: 'Clubs App',
